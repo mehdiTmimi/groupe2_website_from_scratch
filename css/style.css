@@ -1,5 +1,5 @@
 :root {
-  --motard-color:#b36f0f;
+  --motard-color: #b36f0f;
 }
 * {
   padding: 0;
@@ -65,50 +65,128 @@ header .avis-btn {
   color: white;
   align-items: center;
 }
-#section1 h1{
-    margin-bottom: 80px;
-    font-size: 2em; /*1em = 16px*/
+#section1 h1 {
+  margin-bottom: 80px;
+  font-size: 2em; /*1em = 16px*/
 }
-#section1 div{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    margin-top: 20px;
+#section1 div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-top: 20px;
 }
-#section1 div ol{
-    display: flex;
-    gap: 10px;
-    margin-left: 10%;
+#section1 div ol {
+  display: flex;
+  gap: 10px;
+  margin-left: 10%;
 }
 
-#section1 div ol li{
-    display: block;
+#section1 div ol li {
+  display: block;
 }
-#section1 div ol li a{
-    text-decoration: none;
-    color: white;
+#section1 div ol li a {
+  text-decoration: none;
+  color: white;
 }
-#section1 button{
-    background: transparent;
-    color: white;
-    font-style: italic;
-    margin-right: 5px;
-    border: 1px solid white;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
+#section1 button {
+  background: transparent;
+  color: white;
+  font-style: italic;
+  margin-right: 5px;
+  border: 1px solid white;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
 }
 
 /* ------------------------------ section 2 ------------------------ */
 
-#section2{
+#section2 {
   padding: 60px 25%; /* 40px top, 40px bottom , 25% de la largeur du section 2 => left and right*/
 }
-#section2 h2{
+#section2 h2 {
   color: var(--motard-color);
   margin-bottom: 40px;
 }
-#section2 p{
+#section2 p {
   text-align: justify;
+}
+
+/* --------------------------------- section 3 ------------------------ */
+
+#section3 {
+  background: rgb(240, 240, 240);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 100px;
+  gap: 40px;
+}
+#section3 h2 {
+  color: var(--motard-color);
+  font-size: 2em;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+#section3 p {
+  text-align: center;
+}
+#section3 .div-destinations {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+#section3 ul {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+  justify-content: center;
+  color: white;
+}
+#section3 ul li {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 400px;
+  width: 20%;
+  min-width: 250px;
+  padding: 20px;
+  gap: 20px;
+  background-size: cover;
+  background-position-x: center;
+}
+#section3 ul li h3 {
+  font-size: 1.5em;
+}
+#section3 ul li strong {
+  font-size: 1.3em;
+}
+#section3 ul a {
+  color: inherit;
+}
+#section3 .destination-voyage-1 {
+  background-image: url(../img/voyage-1.png);
+}
+#section3 .destination-voyage-2 {
+  background-image: url(../img/voyage-2.jpeg);
+}
+#section3 .destination-voyage-3 {
+  background-image: url(../img/voyage-3.jpeg);
+}
+#section3 .destination-voyage-4 {
+  background-image: url(../img/voyage-4.jpeg);
+}
+
+#section3 .div-destinations button {
+  border: 0;
+  color: white;
+  background: var(--motard-color);
+  padding: 10px 20px;
+  border-radius: 15px;
 }
