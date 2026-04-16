@@ -1,4 +1,5 @@
 :root {
+  --motard-color:#b36f0f;
 }
 * {
   padding: 0;
@@ -42,10 +43,10 @@ header button {
 }
 header .btns-header {
   display: flex;
-  color: #b36f0f;
+  color: var(--motard-color);
 }
 header .avis-btn {
-  background: #b36f0f;
+  background: var(--motard-color);
   color: white;
   border-radius: 10px;
 }
@@ -97,4 +98,17 @@ header .avis-btn {
     width: 20px;
     height: 20px;
     border-radius: 50%;
+}
+
+/* ------------------------------ section 2 ------------------------ */
+
+#section2{
+  padding: 60px 25%; /* 40px top, 40px bottom , 25% de la largeur du section 2 => left and right*/
+}
+#section2 h2{
+  color: var(--motard-color);
+  margin-bottom: 40px;
+}
+#section2 p{
+  text-align: justify;
 }
