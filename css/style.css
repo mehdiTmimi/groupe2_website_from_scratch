@@ -161,6 +161,16 @@ header .avis-btn {
   background-size: cover;
   background-position-x: center;
 }
+#section3 ul li .btn-motard{
+  display: none;
+}
+#section3 ul li:hover .btn-motard{
+  display: block;
+}
+#section3 ul li:hover>*{ /* le display none est active
+  seulement aux fils direct du li lorqu on a un hover*/
+  display: none;
+}
 #section3 ul li h3 {
   font-size: 1.5em;
 }
@@ -173,20 +183,35 @@ header .avis-btn {
 #section3 .destination-voyage-1 {
   background-image: url(../img/voyage-1.png);
 }
+#section3 .destination-voyage-1:hover {
+  background-image: url(../img/map-voyage-1.png);
+}
 #section3 .destination-voyage-2 {
   background-image: url(../img/voyage-2.jpeg);
+}
+#section3 .destination-voyage-2:hover {
+  background-image: url(../img/map-voyage-2.png);
 }
 #section3 .destination-voyage-3 {
   background-image: url(../img/voyage-3.jpeg);
 }
+#section3 .destination-voyage-3:hover {
+  background-image: url(../img/map-voyage-3.png);
+}
 #section3 .destination-voyage-4 {
   background-image: url(../img/voyage-4.jpeg);
 }
+#section3 .destination-voyage-4:hover {
+  background-image: url(../img/map-voyage-4.png);
+}
 
-#section3 .div-destinations button {
+#section3 .btn-motard{
   border: 0;
   color: white;
   background: var(--motard-color);
   padding: 10px 20px;
   border-radius: 15px;
+}
+#section3 .div-destinations button:hover{
+  color: blue;
 }
