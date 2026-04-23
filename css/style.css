@@ -218,7 +218,7 @@ header .avis-btn {
 }
 
 /* ------------------------footer ------------------- */
-footer{
+footer {
   margin-bottom: 90px;
 }
 footer .footer-advantages {
@@ -255,6 +255,7 @@ footer .footer-agences h3 {
 }
 footer .footer-agences ul {
   display: flex;
+  flex-wrap: wrap;
   gap: 60px;
 }
 footer .footer-agences ul li {
@@ -296,4 +297,28 @@ footer .footer-agences ul.footer-social-media li a {
   padding: 10px 20px;
   border-radius: 10px;
   border: 0;
+}
+
+@media screen and (max-width: 1200px) {
+  /* if largeur <1200px*/
+  header .logo-li {
+    order: -1;
+    text-align: center;
+    width: 100%;
+  }
+  header ol {
+    flex-wrap: wrap;
+  }
+}
+@media screen and (max-width: 1000px) {
+  footer .footer-advantages li:first-child {
+     justify-content: unset; 
+  }
+  footer .footer-advantages{
+    flex-wrap: wrap;
+  }
+  footer .footer-advantages li {
+    flex: 1;
+    justify-content: center;
+  }
 }
