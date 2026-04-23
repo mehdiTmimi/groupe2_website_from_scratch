@@ -218,6 +218,9 @@ header .avis-btn {
 }
 
 /* ------------------------footer ------------------- */
+footer{
+  margin-bottom: 90px;
+}
 footer .footer-advantages {
   display: flex;
   justify-content: center;
