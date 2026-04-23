@@ -224,6 +224,7 @@ footer .footer-advantages {
   background: lightgray;
   padding: 3px 0px;
   gap: 3px;
+  margin-bottom: 20px;
 }
 footer .footer-advantages li {
   padding: 40px;
@@ -238,4 +239,58 @@ footer .footer-advantages li:last-child {
 }
 footer .footer-advantages li:first-child {
   justify-content: flex-end;
+}
+footer .footer-agences {
+  margin: 0px 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+footer .footer-agences h3 {
+  font-weight: normal;
+  margin-bottom: 10px;
+}
+footer .footer-agences ul {
+  display: flex;
+  gap: 60px;
+}
+footer .footer-agences ul li {
+  display: block;
+}
+footer .footer-agences ul li img {
+  width: 200px;
+}
+footer .footer-agences ul.footer-social-media {
+  gap: 20px;
+}
+footer .footer-agences ul.footer-social-media li {
+  color: var(--motard-color);
+  border: 2px solid var(--motard-color);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer .footer-agences ul.footer-social-media li a {
+  color: inherit;
+}
+#devis-btn {
+  position: fixed;
+  bottom: 0;
+  background: white;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+#devis-btn button {
+  color: white;
+  background-color: var(--motard-color);
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: 0;
 }
