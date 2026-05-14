@@ -1,12 +1,38 @@
-// element.addEventListener("event",callback);
-// le callback sera execute une fois l event est realise sur l element
-let titre1 = document.getElementsByClassName("hero-title")[0]
-titre1.addEventListener("click",()=>{
-    alert("salut")
+const viderForm = () => {
+    document.getElementById("name").value = ""
+    document.getElementById("date").value = ""
+    document.getElementById("terrain").value = ""
+    document.getElementById("start").value = ""
+    document.getElementById("end").value = ""
+}
+resetBtn.addEventListener("click", () => {
+    viderForm()
 })
-titre1.addEventListener("mouseleave",()=>{
-    console.log("salut")
-})
-resetBtn.addEventListener("click",()=>{
-    document.getElementById("name").value=""
+submitBtn.addEventListener('click', () => {
+    //recuperation des valeurs
+    // jour,mois,heureDepart,heureFin,sport,terrain,nom
+    let dateValue = date.value // jour et le mois
+    let heureDepart = start.value
+    let heureFin = end.value
+    const optionSelected = terrain.options[terrain.selectedIndex]
+    let terrainValue = optionSelected.textContent
+    let sportValue = optionSelected.parentElement.getAttribute("label")
+    let nom = document.getElementById("name").value
+    // validation du formulaire
+    if (dateValue == "" || heureDepart == "" || heureFin == "" || terrainValue == "" ||
+        sportValue == "" || nom == ""
+    )
+        return alert("please fill all the required fields")
+
+    // preparation des donnees
+    let d = new Date(date.value)
+    let mois = d.toLocaleString("en-US", { month: "short" })
+    let jour = d.toLocaleString("en-US", { day: "numeric" })
+
+    addReservation_version2(jour, mois, heureDepart, heureFin, sportValue, terrainValue, nom)
+
+    // vider 
+    viderForm()
+
+
 })

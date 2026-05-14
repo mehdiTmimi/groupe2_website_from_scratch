@@ -154,29 +154,7 @@
                         </div>
                     </div>
 
-                    <div class="field">
-                        <label for="players">Joueurs</label>
-                        <div class="input-wrap select-wrap">
-                            <svg class="input-icon" width="18" height="18" viewBox="0 0 24 24" fill="none"
-                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-                                <circle cx="9" cy="7" r="4"></circle>
-                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
-                                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-                            </svg>
-                            <select id="players" name="players">
-                                <option value="2">2 joueurs</option>
-                                <option value="3">3 joueurs</option>
-                                <option value="4" selected>4 joueurs</option>
-                                <option value="6">6 joueurs</option>
-                                <option value="10">10 joueurs</option>
-                            </select>
-                            <svg class="select-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none"
-                                stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
-                                <polyline points="6 9 12 15 18 9"></polyline>
-                            </svg>
-                        </div>
-                    </div>
+                   
 
                     <div class="field">
                         <label for="start">Heure de début</label>
@@ -202,13 +180,7 @@
                         </div>
                     </div>
 
-                    <div class="field full">
-                        <label for="notes">Note (optionnel)</label>
-                        <div class="input-wrap textarea-wrap">
-                            <textarea id="notes" name="notes" rows="3"
-                                placeholder="Demandes spécifiques, équipement, partenaire..."></textarea>
-                        </div>
-                    </div>
+                 
 
                     <div class="form-footer full">
                         <p class="form-note">
@@ -222,7 +194,7 @@
                         </p>
                         <div class="form-actions">
                             <button type="reset" id="resetBtn" class="btn btn-ghost">Réinitialiser</button>
-                            <button type="submit" class="btn btn-primary">
+                            <button id="submitBtn" type="submit" class="btn btn-primary">
                                 Confirmer la réservation
                                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                     stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
@@ -254,186 +226,10 @@
                 </div>
 
                 <ul id="listReservation" class="reservation-list">
-                    <li class="reservation-item">
-                        <div class="rsv-date">
-                            <span class="rsv-day">02</span>
-                            <span class="rsv-month">Mai</span>
-                        </div>
-                        <div class="rsv-body">
-                            <div class="rsv-top">
-                                <h3 class="rsv-name">Match du soir — Mehdi</h3>
-                                <span class="tag tag-tennis">Tennis</span>
-                            </div>
-                            <div class="rsv-meta">
-                                <span class="meta">
-                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                        <circle cx="12" cy="12" r="10"></circle>
-                                        <polyline points="12 6 12 12 16 14"></polyline>
-                                    </svg>
-                                    18:00 → 19:30
-                                </span>
-                                <span class="meta">
-                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-                                        <circle cx="12" cy="10" r="3"></circle>
-                                    </svg>
-                                    Court n°2 · Terre battue
-                                </span>
-                            </div>
-                        </div>
-                        <div class="rsv-status">
-                            <span class="status status-confirmed">Confirmée</span>
-                        </div>
-                    </li>
-
-                    <li class="reservation-item">
-                        <div class="rsv-date">
-                            <span class="rsv-day">04</span>
-                            <span class="rsv-month">Mai</span>
-                        </div>
-                        <div class="rsv-body">
-                            <div class="rsv-top">
-                                <h3 class="rsv-name">Padel entre amis</h3>
-                                <span class="tag tag-padel">Padel</span>
-                            </div>
-                            <div class="rsv-meta">
-                                <span class="meta">
-                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                        <circle cx="12" cy="12" r="10"></circle>
-                                        <polyline points="12 6 12 12 16 14"></polyline>
-                                    </svg>
-                                    10:00 → 11:00
-                                </span>
-                                <span class="meta">
-                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-                                        <circle cx="12" cy="10" r="3"></circle>
-                                    </svg>
-                                    Padel A · Panoramique
-                                </span>
-                            </div>
-                        </div>
-                        <div class="rsv-status">
-                            <span class="status status-pending">En attente</span>
-                        </div>
-                    </li>
-
-                    <li class="reservation-item">
-                        <div class="rsv-date">
-                            <span class="rsv-day">07</span>
-                            <span class="rsv-month">Mai</span>
-                        </div>
-                        <div class="rsv-body">
-                            <div class="rsv-top">
-                                <h3 class="rsv-name">Foot 5 · Équipe Alpha</h3>
-                                <span class="tag tag-foot">Football</span>
-                            </div>
-                            <div class="rsv-meta">
-                                <span class="meta">
-                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                        <circle cx="12" cy="12" r="10"></circle>
-                                        <polyline points="12 6 12 12 16 14"></polyline>
-                                    </svg>
-                                    20:30 → 22:00
-                                </span>
-                                <span class="meta">
-                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-                                        <circle cx="12" cy="10" r="3"></circle>
-                                    </svg>
-                                    Foot 5 · Synthétique
-                                </span>
-                            </div>
-                        </div>
-                        <div class="rsv-status">
-                            <span class="status status-confirmed">Confirmée</span>
-                        </div>
-                    </li>
-
-                    <li class="reservation-item">
-                        <div class="rsv-date">
-                            <span class="rsv-day">11</span>
-                            <span class="rsv-month">Mai</span>
-                        </div>
-                        <div class="rsv-body">
-                            <div class="rsv-top">
-                                <h3 class="rsv-name">Coaching individuel</h3>
-                                <span class="tag tag-tennis">Tennis</span>
-                            </div>
-                            <div class="rsv-meta">
-                                <span class="meta">
-                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                        <circle cx="12" cy="12" r="10"></circle>
-                                        <polyline points="12 6 12 12 16 14"></polyline>
-                                    </svg>
-                                    08:00 → 09:00
-                                </span>
-                                <span class="meta">
-                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-                                        <circle cx="12" cy="10" r="3"></circle>
-                                    </svg>
-                                    Court n°4 · Indoor
-                                </span>
-                            </div>
-                        </div>
-                        <div class="rsv-status">
-                            <span class="status status-confirmed">Confirmée</span>
-                        </div>
-                    </li>
-
-                    <li class="reservation-item">
-                        <div class="rsv-date">
-                            <span class="rsv-day">14</span>
-                            <span class="rsv-month">Mai</span>
-                        </div>
-                        <div class="rsv-body">
-                            <div class="rsv-top">
-                                <h3 class="rsv-name">Basket — Tournoi interne</h3>
-                                <span class="tag tag-basket">Basket</span>
-                            </div>
-                            <div class="rsv-meta">
-                                <span class="meta">
-                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                        <circle cx="12" cy="12" r="10"></circle>
-                                        <polyline points="12 6 12 12 16 14"></polyline>
-                                    </svg>
-                                    17:00 → 19:00
-                                </span>
-                                <span class="meta">
-                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-                                        <circle cx="12" cy="10" r="3"></circle>
-                                    </svg>
-                                    Basket Indoor
-                                </span>
-                            </div>
-                        </div>
-
-                    </li>
+                   
                 </ul>
 
-                <footer class="list-footer">
-                    <span class="list-footer-text">5 réservations affichées sur 12</span>
-                    <a href="#" class="link-arrow">
-                        Voir l'historique complet
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-                            <line x1="5" y1="12" x2="19" y2="12"></line>
-                            <polyline points="12 5 19 12 12 19"></polyline>
-                        </svg>
-                    </a>
-                </footer>
+               
             </section>
         </div>
     </main>
