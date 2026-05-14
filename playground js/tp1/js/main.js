@@ -29,7 +29,8 @@ submitBtn.addEventListener('click', () => {
     let mois = d.toLocaleString("en-US", { month: "short" })
     let jour = d.toLocaleString("en-US", { day: "numeric" })
 
-    addReservation_version2(jour, mois, heureDepart, heureFin, sportValue, terrainValue, nom)
+    let data = {jour, mois, heureDepart, heureFin, sport : sportValue, terrain : terrainValue, nom}
+    addReservation_version2(data)
 
     // vider 
     viderForm()
